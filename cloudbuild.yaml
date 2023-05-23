@@ -1,15 +1,15 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args:
-  - 'build'
-  - '-t'
-  - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2'
-  - '.'
-# - name: 'gcr.io/cloud-builders/docker'
-#   args:
-#   - 'push'
-#   - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2-$COMMIT_SHA'
-- name: 'gcr.io/cloud-builders/npm'
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2'
+      - '.'
+  #- name: 'gcr.io/cloud-builders/docker'
+  #  args:
+  #    - 'push'
+  #    - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2-$COMMIT_SHA'
+  - name: 'gcr.io/cloud-builders/npm'
     args:
       - 'install'
   - name: 'gcr.io/cloud-builders/npm'
@@ -17,5 +17,6 @@ steps:
       - 'test'
       - '--'
       - '--exit'
+
 images:
-- 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2'
+  - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2'
