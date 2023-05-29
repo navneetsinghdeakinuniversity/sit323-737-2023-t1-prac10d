@@ -13,15 +13,5 @@ steps:
         npm install
         chmod +x ./node_modules/.bin/mocha
         npm test
-  - name: 'gcr.io/cloud-builders/kubectl'
-    args:
-      - 'apply'
-      - '-f'
-      - 'deployment.yaml'
-    env:
-      - 'CLOUDSDK_COMPUTE_ZONE=australia-southeast1'
-      - 'CLOUDSDK_CONTAINER_CLUSTER=autopilot-cluster-1'
 images:
   - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2'
-
-
