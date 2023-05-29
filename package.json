@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha",
+    "test": "node server.test.js",
     "start": "node server.js",
     "fix-mocha-permissions": "chmod +x ./node_modules/mocha/bin/mocha"
   },
