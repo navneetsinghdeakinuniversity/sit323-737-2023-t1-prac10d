@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "start": "node server.js",
-    "fix-mocha-permissions": "chmod +x ./node_modules/.bin/mocha"
+    "fix-mocha-permissions": "chmod +x ./node_modules/mocha/bin/mocha"
   },
   "author": "",
   "license": "ISC",
