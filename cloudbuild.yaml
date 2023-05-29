@@ -13,17 +13,20 @@ steps:
     args:
       - 'install'
       - 'mocha'
-
-  - name: 'gcr.io/cloud-builders/npm'
-    args:
-      - 'test'
-      - '--'
-      - '--exit'
-
   - name: 'gcr.io/cloud-builders/npm'
     args:
       - 'run'
-      - 'fix-mocha-permissions'
+      - 'test'
+  # - name: 'gcr.io/cloud-builders/npm'
+  #   args:
+  #     - 'test'
+  #     - '--'
+  #     - '--exit'
+
+  # - name: 'gcr.io/cloud-builders/npm'
+  #   args:
+  #     - 'run'
+  #     - 'fix-mocha-permissions'
 
 images:
   - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2'
