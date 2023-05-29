@@ -1,7 +1,7 @@
 const request = require('supertest');
 const assert = require('assert');
 
-const app = require('./server'); // Assuming the server.js file is in the same directory
+const app = require('../server');
 
 
 describe('GET /hello', () => {
