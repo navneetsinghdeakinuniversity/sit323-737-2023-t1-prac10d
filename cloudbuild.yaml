@@ -15,9 +15,8 @@ steps:
 
   - name: 'gcr.io/cloud-builders/npm'
     args:
+      - 'run'
       - 'test'
-      - '--'
-      - '--exit'
   
 
 images:
