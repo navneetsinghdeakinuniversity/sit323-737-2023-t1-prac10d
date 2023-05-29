@@ -16,6 +16,7 @@ steps:
       - |
         npm install
         chmod +x ./node_modules/.bin/mocha
-        ./node_modules/.bin/mocha test/server.test.js --exit
+        npm test
+      # ./node_modules/.bin/mocha test/server.test.js --exit
 images:
   - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2'
