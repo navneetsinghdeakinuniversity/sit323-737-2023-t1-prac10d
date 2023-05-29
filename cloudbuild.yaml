@@ -5,12 +5,20 @@ steps:
       - '-t'
       - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2'
       - '.'
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2-$COMMIT_SHA'
   - name: 'node:alpine'
     entrypoint: 'ash'
     args:
       - '-c'
       - |
+        # Install dependencies
         npm install
-        npm test
+        # Grant execute permissions to mocha
+        chmod +x ./node_modules/.bin/mocha
+        # Run tests
+        ./node_modules/.bin/mocha test/server.test.js --exit
 images:
   - 'us-west2-docker.pkg.dev/sit737-23t1-navneet-si-efb3624/task10d/node-application:v2'
