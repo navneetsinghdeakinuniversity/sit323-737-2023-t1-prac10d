@@ -7,8 +7,7 @@ RUN npm install
 
 COPY . .
 
-# Give execute permissions to mocha binary
-RUN chmod +x ./node_modules/.bin/mocha
+RUN chmod +x ./node_modules/mocha/bin/mocha
 
 EXPOSE 8080
 
