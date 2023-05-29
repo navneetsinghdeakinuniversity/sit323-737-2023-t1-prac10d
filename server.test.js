@@ -1,4 +1,6 @@
 const request = require('supertest');
+const { expect } = require('chai');
+
 const app = require('./server'); // Assuming the server.js file is in the same directory
 
 describe('GET /hello', () => {

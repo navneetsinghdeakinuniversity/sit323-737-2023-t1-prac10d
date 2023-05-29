@@ -12,6 +12,20 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     args:
       - 'install'
+  # - name: 'gcr.io/cloud-builders/npm'
+  #   args:
+  #     - 'test'
+  #     - '--'
+  #     - '--exit'
+  # - name: 'gcr.io/cloud-builders/npm'
+  #   entrypoint: 'bash'
+  #   args:
+  #     - '-c'
+  #     - 'npx mocha --exit'
+  - name: 'gcr.io/cloud-builders/npm'
+    args:
+      - 'install'
+      - 'mocha'
   - name: 'gcr.io/cloud-builders/npm'
     args:
       - 'test'
