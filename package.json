@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha",
-    "start": "node server.js"
+    "start": "node server.js",
+    "fix-mocha-permissions": "chmod +x ./node_modules/.bin/mocha"
   },
   "author": "",
   "license": "ISC",
